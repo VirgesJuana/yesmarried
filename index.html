@@ -14,12 +14,6 @@
             text-align: center;
         }
 
-        #confirmationMessage {
-            display: none;
-            color: green;
-            font-weight: bold;
-        }
-
         form {
             margin-top: 20px;
         }
@@ -44,8 +38,9 @@
 </head>
 <body>
     <div class="container">
-        <div id="confirmationMessage">O nosso casamento está marcado para o dia 31/02/2025. Por favor, preencha o formulário abaixo.</div>
-        <form id="weddingForm" style="display:none;">
+        <h2>O nosso casamento está marcado para o dia 31/02/2025.</h2>
+        <p>Por favor, preencha o formulário abaixo:</p>
+        <form id="weddingForm">
             <label for="name">Nome:</label><br>
             <input type="text" id="name" name="name" required><br>
             <label for="dob">Data de Nascimento:</label><br>
@@ -59,14 +54,5 @@
             <input type="submit" value="Confirmar">
         </form>
     </div>
-
-    <script>
-        document.getElementById("confirmationButton").addEventListener("click", function() {
-            var confirmationMessage = document.getElementById("confirmationMessage");
-            var weddingForm = document.getElementById("weddingForm");
-            confirmationMessage.style.display = "block";
-            weddingForm.style.display = "block";
-        });
-    </script>
 </body>
 </html>
